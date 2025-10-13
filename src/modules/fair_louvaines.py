@@ -443,7 +443,7 @@ def fair_louvain_partitions_fexp(G, weight="weight", resolution=1, threshold=0.0
 			n_extra=n_ci-sum_dist
 
 			# Calculate F_exp(c_i)
-			f_exp=(K_cols*phi*n_ci-(phi+K_cols-1-(phi*K_cols))*n_extra)/((K_cols-1)*(K_cols*n_ci + (phi-1)*n_extra))
+			f_exp=(K_cols*phi*n_ci+(phi+K_cols-1-(phi*K_cols))*n_extra)/((K_cols*n_ci + (phi-1)*n_extra))
 
 			# For all nodes u in ci, check sums of colors
 			sum_cols=[0 for _c in color_list]
@@ -613,7 +613,7 @@ def fair_louvain_partitions_hybrid(G, weight="weight", resolution=1, threshold=0
 			n_extra=n_ci-sum_dist
 
 			# Calculate F_exp(c_i)
-			f_exp=(K_cols*phi*n_ci-(phi+K_cols-1-(phi*K_cols))*n_extra) /((K_cols-1)*(K_cols*n_ci + (phi-1)*n_extra))
+			f_exp=(K_cols*phi*n_ci+(phi+K_cols-1-(phi*K_cols))*n_extra) /((K_cols*n_ci + (phi-1)*n_extra))
 
 			# For all nodes u in ci, check sums of colors
 			sum_cols=[0 for _c in color_list]

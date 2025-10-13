@@ -145,7 +145,7 @@ def _calculate_partition_mod(G, n, m, partition, colors, color_dist, phi, resolu
 				n_extra=n_ci-sum_dist
 
 				# Calculate F_exp(c_i)
-				f_exp=(K_cols*phi*n_ci-(phi+K_cols-1-(phi*K_cols))*n_extra) /((K_cols-1)*(K_cols*n_ci + (phi-1)*n_extra))
+				f_exp=(K_cols*phi*n_ci+(phi+K_cols-1-(phi*K_cols))*n_extra) /((K_cols*n_ci + (phi-1)*n_extra))
 
 				# Get final score
 				if n_ci>=K_cols:
@@ -504,7 +504,7 @@ def _calculate_partition_fexp(G, n, m, partition, colors, color_dist, partition_
 			curr_n_extra=len(com)-sum_dist
 
 			# Calculate current F_exp(c_i)
-			curr_f_exp=(K_cols*phi*len(com)-(phi+K_cols-1-(phi*K_cols))*curr_n_extra) /((K_cols-1)*(K_cols*len(com) + (phi-1)*curr_n_extra))
+			curr_f_exp=(K_cols*phi*len(com)+(phi+K_cols-1-(phi*K_cols))*curr_n_extra) /((K_cols*len(com) + (phi-1)*curr_n_extra))
 
 
 			# Calculate score for current c_i minus the penalty
@@ -556,7 +556,7 @@ def _calculate_partition_fexp(G, n, m, partition, colors, color_dist, partition_
 			if post_comm_len==0:
 				post_f_exp=0.0
 			else:
-				post_f_exp=(K_cols*phi*post_comm_len-(phi+K_cols-1-(phi*K_cols))*post_n_extra) /((K_cols-1)*(K_cols*post_comm_len + (phi-1)*post_n_extra))
+				post_f_exp=(K_cols*phi*post_comm_len+(phi+K_cols-1-(phi*K_cols))*post_n_extra) /((K_cols*post_comm_len + (phi-1)*post_n_extra))
 
 			# Calculate score for current c_i minus the penalty
 			if post_comm_len>=K_cols:
@@ -613,7 +613,7 @@ def _calculate_partition_fexp(G, n, m, partition, colors, color_dist, partition_
 				if new_comm_len==0:
 					new_f_exp=0.0
 				else:
-					new_f_exp=(K_cols*phi*new_comm_len-(phi+K_cols-1-(phi*K_cols))*new_n_extra) /((K_cols-1)*(K_cols*new_comm_len + (phi-1)*new_n_extra))
+					new_f_exp=(K_cols*phi*new_comm_len+(phi+K_cols-1-(phi*K_cols))*new_n_extra) /((K_cols*new_comm_len + (phi-1)*new_n_extra))
 
 				# Calculate score for current c_i minus the penalty
 				if new_comm_len>=K_cols:

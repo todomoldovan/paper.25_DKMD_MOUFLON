@@ -95,7 +95,7 @@ def fairness_fexp(G, partition, color_dist):
 			n_extra=n_ci-sum_dist
 
 			# Calculate F_exp(c_i)
-			f_exp=(K_cols*phi*n_ci-(phi+K_cols-1-(phi*K_cols))*n_extra) /((K_cols-1)*(K_cols*n_ci + (phi-1)*n_extra))
+			f_exp=(K_cols*phi*n_ci+(phi+K_cols-1-(phi*K_cols))*n_extra) /((K_cols*n_ci + (phi-1)*n_extra))
 
 			## Also calculate F(c_i)
 			# For all nodes u in ci, check sums of colors
