@@ -1,4 +1,5 @@
 .DS_Store
+data/raw/deezer_europe_edges.csv
 /data/raw
 /data/obj
 /venv
